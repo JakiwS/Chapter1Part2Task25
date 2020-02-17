@@ -1,23 +1,10 @@
 text = input()
 print(text)
-
-# преобразование строки в список слов,
-# разделение происходит по пробелу
 words = text.split()
-
-# предполагается, что самое длинное слово находится первым
-# в списке, т. е. имеет индекс 0
 longest = 0
 
-# остальные слова перебираются в цикле
 for i in range(1,len(words)):
-    # Если длина слова под индексом idLongestWord больше,
-    # чем длина слова под текущим индексом,
-    if len(words[longest]) < len(words[i]):
-        # то следует записать индекс текущего слова в
-        # переменную idLongestWord
+   if len(words[longest]) < len(words[i]):
         longest = i
 
-# извлечение из списка listWords
-# слова с индексом idLongestWord и его вывод на экран
 print(words[longest])
